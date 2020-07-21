@@ -1,0 +1,339 @@
+/* home page*/
+.initial{
+	position: fixed;
+	text-align:center; 
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+	bottom: 0;
+	right: 0;
+	padding-top: 2vw;
+	background-color: rgba(69,78,68,0.68); 
+	background: #5E574C;
+	background: -moz-linear-gradient(top, #5E574C 0%, #7F87A0 48%, #425356 100%);
+	background: -webkit-linear-gradient(top, #5E574C 0%, #7F87A0 48%, #425356 100%);
+	background: linear-gradient(to bottom, #5E574C 0%, #7F87A0 48%, #425356 100%);
+ 
+}
+.initial button {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 4vw;
+	background-color: #FFFFFF;
+	opacity: 0.7;
+	color: rgba(93,99,98,0.81);
+	width: 50%;
+	height: 25%;
+	border: #FFFFFF;
+	margin: 3vw;
+	box-sizing: border-box;
+	border-radius: 15%;
+}
+button:hover {
+	font-weight: 900;
+	background-color: #515454;
+	color: #FFFFFF;
+	opacity: 0.8;
+	text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF,
+	0 0 20px #B5FEFF, 0 0 30px #B5FEFF, 0 0 40px #B5FEFF, 0 0 55px #B5FEFF, 0 0 75px #B5FEFF;
+}
+button:active {
+  	-webkit-box-shadow: 3px 2px 16px 8px rgba(108,207,255,0.81); 
+	box-shadow: 3px 2px 16px 8px rgba(108,207,255,0.81);
+}
+
+ .promo-description {
+	position: fixed;
+	width: 100%;
+	height: 3.5%;
+	font-size: 0.6vw;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	color: #7F87A0;
+	bottom: 0;
+	left:0;
+	background-color: rgba(57,55,60,0.68);
+ }
+/*---------------------------------------------------create group modal----------------------------------------------------------*/
+.create-group{
+	position: fixed;
+	text-align:center; 
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+}
+
+.create-group-interior-div{
+    width: 50%;
+    height: 50%;
+	margin-top: 10vw;
+	margin-left: 25vw;
+	background-color: white;
+	color: black;
+	padding-top: 0.5vw;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 1.5vw;
+}
+
+.create-group-form-wrapper{
+	background-color: gray;
+	margin-top: 1vw;
+	height: 60%;
+	color: black;
+	margin-bottom: 1vw;
+}
+.create-group-form-wrapper ul{
+	display: none;
+}
+.create-group-form-wrapper label{
+	display: none;
+}
+
+.group-form{
+	margin-top: 5vw;
+	width: 50%;
+	height:15%;
+	padding-left: 1vw;
+}
+
+.group-form::placeholder{
+	color: gray;
+	font-size: 1vw;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+.group-form[type=text]{
+	color: black;
+	font-size: 1vw;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+.create-group-interior-div button {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 1vw;
+	background-color: rgba(93,99,98,0.81);
+	width: 20%;
+	padding: 2% 2%;
+	box-sizing: border-box;
+	border-radius: 50px;
+}
+/*------------------------------------create codes modal------------------------------------------*/
+.create-codes{
+	position: fixed;
+	text-align:center; 
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+} 
+.create-codes-interior-div{
+    width: 50%;
+    height: 50%;
+	margin-top: 10vw;
+	margin-left: 25vw;
+	background-color: white;
+	color: black;
+	padding-top: 0.5vw;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 1.5vw;
+}
+.create-codes-form-wrapper{
+	background-color: gray;
+	margin-top: 1vw;
+	height: 60%;
+	color: black;
+	margin-bottom: 1vw;
+}
+.create-codes-form-wrapper ul{
+	display: none;
+}
+.codes-form{
+	margin-top: 1vw;
+	width: 50%;
+	height:15%;
+	padding-left: 1vw;
+}
+
+.create-codes-form-wrapper label{
+	display: none;
+}
+
+.codes-form::placeholder{
+	color: gray;
+	font-size: 1vw;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+.codes-form[type=text]{
+	color: black;
+	font-size: 1vw;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+.create-codes-interior-div button {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 1vw;
+	background-color: rgba(93,99,98,0.81);
+	width: 20%;
+	padding: 2% 2%;
+	box-sizing: border-box;
+	border-radius: 50px;
+	margin-right: 1vw;
+}
+
+.code-list{
+	width: 50%;
+	height: 50%;
+	overflow: auto;
+	background-color: white;
+	margin-left: 12.5vw;
+}
+/*-------------------------------------set up maker modal-------------------------------------------*/
+.maker-set-up{
+	position: fixed;
+	text-align:center; 
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+} 
+.maker-set-up-interior-div{
+    width: 50%;
+    height: 50%;
+	margin-top: 10vw;
+	margin-left: 25vw;
+	background-color: white;
+	color: black;
+	padding-top: 0.5vw;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 1.5vw;
+}
+.create-maker-form-wrapper{
+	background-color: gray;
+	margin-top: 1vw;
+	height: 60%;
+	color: black;
+	margin-bottom: 1vw;
+}
+.create-maker-form-wrapper ul{
+	display: none;
+}
+
+.create-maker-form-wrapper label{
+	display: none;
+}
+
+.create-maker-form-wrapper input{
+	margin-top: 1vw;
+	width: 50%;
+	height:15%;
+	padding-left: 1vw;
+}
+
+.create-maker-form-wrapper input::placeholder{
+	color: gray;
+	font-size: 1vw;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+.create-maker-form-wrapper input[type=text]{
+	color: black;
+	font-size: 1vw;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+.maker-set-up-interior-div button {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 1vw;
+	background-color: rgba(93,99,98,0.81);
+	width: 20%;
+	padding: 2% 2%;
+	box-sizing: border-box;
+	border-radius: 50px;
+	margin-right: 1vw;
+}
+/*---------------------------------------join a group modal--------------------------------------*/
+.user-set-up{
+	position: fixed;
+	text-align:center; 
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+} 
+.user-set-up-interior-div{
+    width: 50%;
+    height: 50%;
+	margin-top: 10vw;
+	margin-left: 25vw;
+	background-color: white;
+	color: black;
+	padding-top: 0.5vw;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 1.5vw;
+}
+.join-form-wrapper{
+	background-color: gray;
+	margin-top: 1vw;
+	height: 60%;
+	color: black;
+	margin-bottom: 1vw;
+}
+.join-form-wrapper ul{
+	display: none;
+}
+
+.join-form-wrapper label{
+	display: none;
+}
+
+.join-form-wrapper input{
+	margin-top: 1vw;
+	width: 50%;
+	height:15%;
+	padding-left: 1vw;
+}
+
+.join-form-wrapper input::placeholder{
+	color: gray;
+	font-size: 1vw;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+.join-form-wrapper input[type=text]{
+	color: black;
+	font-size: 1vw;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+.user-set-up-interior-div button {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 1vw;
+	background-color: rgba(93,99,98,0.81);
+	width: 20%;
+	padding: 2% 2%;
+	box-sizing: border-box;
+	border-radius: 50px;
+	margin-right: 1vw;
+}
+
+/*------------------------------------------------------------------------------*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+

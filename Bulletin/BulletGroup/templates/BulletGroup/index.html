@@ -1,0 +1,97 @@
+{%load static%}
+ <link rel = "stylesheet" type = "text/css" href = "{%static 'BulletGroup/style.css' %}" />
+
+ <!--This is the home page-->
+	<div class="initial">
+		{%csrf_token%}
+		<button type='submit' id="create">create</button>
+		<button type='submit' id="join">join</button>
+		
+		<footer class = "promo-description">
+			made by: Ervey Del Rosario | Summer 2019 | email: e.keedelrosario@gmail.com <br>
+			P.S: HIRE ME~
+
+		</footer>
+	</div>
+<!---------------------------------------------------------------------------------------------------------------------------------->
+ <!--creating group modal-->
+	<div class="create-group">
+		<div class="create-group-interior-div">
+			Create Group
+			<form method = "POST" class="group">
+				{%csrf_token%}
+					<div class = "create-group-form-wrapper">
+						{{create}}
+						{{group_form.as_p}}
+					</div>
+				<button type='submit' id="continue_group">Continue</button>
+			</form>
+		</div>
+	</div>
+
+<!---------------------------------------------------------------------------------------------------------------------------------->
+ <!--creating the codes modal-->
+	<div class="create-codes">
+		<div class="create-codes-interior-div">
+			Create Codes
+			<form method = "POST" class = "codes">
+				{%csrf_token%}
+				<div class = "create-codes-form-wrapper">
+					{{codes_form.as_p}}
+
+					<div class = "code-list"></div>
+				</div>
+
+				<button type='submit' id="add_codes" method = "POST">Add Codes</input>
+				<button type='submit' id="continue_codes">Continue</input>
+				
+			</form>
+		</div>
+	</div>
+
+<!---------------------------------------------------------------------------------------------------------------------------------->
+<!--set up for the maker modal-->
+	<div class="maker-set-up">
+		<div class="maker-set-up-interior-div">
+			Maker Info
+			<form method = "POST" class = "maker" name = "maker-form">
+				{%csrf_token%}
+				<div class = "create-maker-form-wrapper">
+					<p>
+						<input type="text" name= "user-code" required= "True" placeholder="Code name"> 
+					</p>
+					{{maker_form.as_p}}
+				</div>
+				<button type='submit' id="continue_continue">Continue</input>
+			</form>
+		</div>
+	</div>
+
+<!---------------------------------------------------------------------------------------------------------------------------------->
+<!--joining a group modal-->
+	<div class="user-set-up">
+		<div class="user-set-up-interior-div">
+			User Info
+			<form method = "POST" class = "user" name = "user-form">
+				{%csrf_token%}
+				<div class = "join-form-wrapper">
+					<p>
+						<input type="text" name= "user-code-user" required= "True" placeholder="Code name"> 
+					</p>
+
+					{{user_form.as_p}}
+				
+					<p>
+						<label>Group:</label>
+						<input type="text" name= "user-group" required= "True" placeholder="Group name"> 
+					</p>
+				</div>
+				<button type='submit' id="continue_user">Continue</button>
+			</form>
+		<div>
+	</div>
+
+<!---------------------------------------------------------------------------------------------------------------------------------->	
+<!--Using a google-hosted JQuery CDN for Ajax; I have no idea what JQuery is for or what a CDN is-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="{%static 'BulletGroup/functionality.js'%}"></script>

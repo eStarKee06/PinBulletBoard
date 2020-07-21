@@ -1,0 +1,85 @@
+{%load static%}
+
+<link rel = "stylesheet" type = "text/css" href = "{%static 'BulletGroup/style2.css' %}" />
+<div class= "board">
+	<div class="bulletin-identifier">
+		group: {{currentGroup}} 
+		user: {{currentUser}}
+	</div>
+	<div class = "post-list">
+		{% for post in postList%}
+			<div class = "individual-posts">
+				<div class="title">{{post.title}}</div> <br>
+				{{post.media}}<br>
+				{% for image in post.media_set.all%}
+					<img src="{{image.content.url}}"/><br>
+				{% endfor %}
+				<textarea class="text" readonly>
+					{{post.freeWrite}}
+				</textarea>
+				<footer class="post-info">
+					{{post.date}}
+				<footer>
+			</div>
+		{% endfor %}
+	</div>
+
+	<div class = "hover-options">></div>
+
+	<div class= "options">
+		<button id ="delete-codes-btn" disabled = "false">delete codes</button>
+		<button id ="delete-group-btn" disabled = "false">delete group</button>
+
+		<button id ="add-post-btn">add post</button>
+		<button id ="log-out">log-out</button>
+	</div>
+
+</div>
+
+<!-------------------------------------------------------------------------------------------------------------------/-->
+<div class="delete-codes-ext">
+	<div class="delete-codes">		
+		<select class = "code-list-select" name ="code-list-select" multiple>
+		{%csrf_token%}
+		<!--this is where the list of codes are-->
+		</select>
+		<div class="delete-codes-buttons">
+			<button id="delete-code-pmt" disabled = "false">delete</button>
+
+			<button id ="done-delete-code" disabled = "false">done</button>
+		</div>
+	</div>
+</div>
+
+<!-------------------------------------------------------------------------------------------------------------------/-->
+<div class = "delete-group-ext">
+	<div class = "delete-group">
+		Are you sure you want to delete the group?
+		<div class="delete-group-buttons">
+			<button id ="delete-group-yes" disabled = "false">yes</button>
+			<button id ="cancel-delete-group" disabled = "false">no</button>
+		</div>
+	</div>
+
+</div>
+
+
+<!----------------------------------------------posts-----------------------------------------------------------------/-->
+<div class = "make-posts-ext">
+	<div class = "make-posts-int">
+		<form method = "POST" class="make-post-form" enctype="multipart/form-data">
+			{%csrf_token%}
+			{{posts_form.as_p}}
+			<button type='button' id="add-file">add File</button>
+		</form>
+		<form method = "POST" class="media-add-form" enctype="multipart/form-data">
+			{%csrf_token%}
+			{{media_form.as_p}}
+		</form>
+		<button type='button' id="make-post">post</button>
+	</div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="{%static 'BulletGroup/functionality2.js'%}"></script>
